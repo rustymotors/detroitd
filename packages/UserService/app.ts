@@ -1,9 +1,19 @@
 import { fileURLToPath } from "node:url";
 import { dirname } from "node:path";
 import express from "express";
+import RateLimit from "express-rate-limit";
 
 const app = express();
 const router = express.Router();
+
+// set up rate limiter: maximum of five requests per minute
+var limiter = RateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100, // max 100 requests per windowMs
+});
+
+// apply rate limiter to all requests
+app.use(limiter);
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
