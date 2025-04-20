@@ -21,7 +21,7 @@ services:
       POSTGRES_PASSWORD: "password"
       POSTGRES_DB: "mcos"
   pgadmin:
-    image: dpage/pgadmin4:6.18
+    image: dpage/pgadmin4:6.21
     environment:
       PGADMIN_DEFAULT_EMAIL: "admin@pgadmin.com"
       PGADMIN_DEFAULT_PASSWORD: "password"
