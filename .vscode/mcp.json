@@ -1,0 +1,12 @@
+{
+    "servers": {
+        "mcos": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@modelcontextprotocol/server-postgres",
+                "postgres://postgres:password@localhost:5432/mcos"
+            ]
+        }
+    }
+}
