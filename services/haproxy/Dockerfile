@@ -1,1 +1,1 @@
-FROM haproxy:3.1.7
+FROM haproxy:3.2.1
